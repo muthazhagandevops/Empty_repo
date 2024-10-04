@@ -1,6 +1,7 @@
 #!/bin/sh
 
 a = 10
+adding stash commit
 
 echo " value of a is $a "
 DATE = `date`
