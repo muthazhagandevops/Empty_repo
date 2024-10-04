@@ -1,0 +1,274 @@
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git branch 
+  Feature_branch
+  main
+  master
+* prod
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ ls
+vcs.sh  vcs2.sh  vcs3.sh
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs.sh 
+#!/bin/bash
+echo " hello world "
+
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git add .
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git status
+On branch prod
+Your branch is up to date with 'origin/prod'.
+
+nothing to commit, working tree clean
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git commit vcs.sh -m "merge commit"     
+On branch prod
+Your branch is up to date with 'origin/prod'.
+
+nothing to commit, working tree clean
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs.sh 
+#!/bin/bash
+echo " hello world "
+
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git add .
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git status
+On branch prod
+Your branch is up to date with 'origin/prod'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   vcs.sh
+
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git commit vcs.sh -m "merge commit"
+[prod 4f1987d] merge commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs.sh 
+#!/bin/bash
+echo " hello world "
+adding for merge
+commit muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ ls
+vcs.sh  vcs2.sh  vcs3.sh
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs.sh 
+#!/bin/bash
+echo " hello world "
+
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git merge prod
+Updating 16a547d..4f1987d
+Fast-forward
+ vcs.sh | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs.sh
+#!/bin/bash
+echo " hello world "
+adding for merge
+commit muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git commit vcs.sh -m "merge commi
+^C
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git checkout prod
+Switched to branch 'prod'
+Your branch is ahead of 'origin/prod' by 1 commit.
+  (use "git push" to publish your local commits)
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ ls
+vcs.sh  vcs2.sh  vcs3.sh
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git add .
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git commit vcs2.sh -m "rebase commit"
+[prod 1b36925] rebase commit
+ 1 file changed, 1 insertion(+)
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs2.sh 
+#!/bin/sh
+a=10
+echo "value of a is $a "
+adding for rebase commit
+
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git checkout prod
+Already on 'prod'
+Your branch is ahead of 'origin/prod' by 2 commits.
+  (use "git push" to publish your local commits)
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ ls
+vcs.sh  vcs2.sh  vcs3.sh
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs2.sh 
+#!/bin/sh
+a=10
+echo "value of a is $a "
+
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git rebase prod
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to prod.
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs2.sh 
+#!/bin/sh
+a=10
+echo "value of a is $a "
+adding for rebase commit
+
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git log --oneline
+1b36925 (HEAD -> master, prod) rebase commit
+4f1987d merge commit
+16a547d (origin/prod, origin/master) 3 sh files commit
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git log 
+commit 1b36925271b8a427fe3a09d692bc7cd8f53530c4 (HEAD -> master, prod)
+Author: muthazhagan <muthazhagan.sm@gmail.com>
+Date:   Fri Oct 4 12:05:29 2024 +0530
+
+    rebase commit
+
+commit 4f1987d1442625db0872d9d9cf539129c1c1dab7
+Author: muthazhagan <muthazhagan.sm@gmail.com>
+Date:   Fri Oct 4 12:00:36 2024 +0530
+
+    merge commit
+
+commit 16a547d58e49a8cd310b7e9438193fa3a3d71491 (origin/prod, origin/master)
+Author: muthazhagan <muthazhagan.sm@gmail.com>
+Date:   Wed Oct 2 17:33:03 2024 +0530
+
+    3 sh files commit
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git checkout prod
+Switched to branch 'prod'
+Your branch is ahead of 'origin/prod' by 2 commits.
+  (use "git push" to publish your local commits)
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ ls
+vcs.sh  vcs2.sh  vcs3.sh
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git stash
+Saved working directory and index state WIP on prod: 1b36925 rebase commit
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs3.sh 
+#!/bin/sh
+
+a = 10
+
+echo " value of a is $a "
+DATE = `date`
+echo date is $DATE
+
+USER = `who | wc -l`
+echo " Logged in user are $USER "
+
+UP = `uptime`
+echo " up time is $UP
+
+
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git stash list
+stash@{0}: WIP on prod: 1b36925 rebase commit
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git stash apply 0
+On branch prod
+Your branch is ahead of 'origin/prod' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   vcs3.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git stash list
+stash@{0}: WIP on prod: 1b36925 rebase commit
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs3.sh
+#!/bin/sh
+
+a = 10
+adding stash commit
+
+echo " value of a is $a "
+DATE = `date`
+echo date is $DATE
+
+USER = `who | wc -l`
+echo " Logged in user are $USER "
+
+UP = `uptime`
+echo " up time is $UP
+
+
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git add .
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git commit vcs2.sh -m "stash commit"
+On branch prod
+Your branch is ahead of 'origin/prod' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+        modified:   vcs3.sh
+
+no changes added to commit
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git commit vcs3.sh -m "stash commit"    
+[prod e9d330d] stash commit
+ 1 file changed, 1 insertion(+)
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git status
+On branch prod
+Your branch is ahead of 'origin/prod' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ cat vcs3.sh 
+#!/bin/sh
+
+a = 10
+adding stash commit
+
+echo " value of a is $a "
+DATE = `date`
+echo date is $DATE
+
+USER = `who | wc -l`
+echo " Logged in user are $USER "
+
+UP = `uptime`
+echo " up time is $UP
+
+
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git branch
+  Feature_branch
+  main
+  master
+* prod
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git push
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 936 bytes | 14.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To github.com:muthazhagandevops/Empty_repo.git
+   16a547d..e9d330d  prod -> prod
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git branch master
+fatal: A branch named 'master' already exists.
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git push
+Everything up-to-date
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git branch
+  Feature_branch
+  main
+  master
+* prod
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git checkout  master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git branch
+  Feature_branch
+  main
+* master
+  prod
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git push
+Total 0 (delta 0), reused 0 (delta 0)
+To github.com:muthazhagandevops/Empty_repo.git
+   16a547d..1b36925  master -> master
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git branch
+  Feature_branch
+  main
+* master
+  prod
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$ git branch
+  Feature_branch
+  main
+* master
+  prod
+muthu@DESKTOP-JQENVIO:/mnt/c/Users/Arunagiri/Github/Git_poc/Empty_repo/Empty_repo$
